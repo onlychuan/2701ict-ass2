@@ -1,0 +1,8 @@
+{
+  "name": "ionic5-starter-tutorial",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

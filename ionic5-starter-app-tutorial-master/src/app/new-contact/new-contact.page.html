@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>New Contact</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" (click)="dismissModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" [disabled]="!createContactForm.valid" (click)="submitForm()">
+        Done
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-thumbnail class="user-image">
+    <img src="{{imagef}}">
+  </ion-thumbnail>
+  
+
+  <!-- <ion-row class="add-photo-wrapper">
+   <input #fileInput type="file" accept="image/*" (change)='imageSelected(fileInput.files)'>
+  </ion-row> -->
+
+  <form [formGroup]="createContactForm" #createForm="ngForm" (ngSubmit)="createContact(createContactForm.value)">
+    <ion-row class="add-photo-wrapper">
+     
+
+      <ion-input placeholder="Upload Image" type="file" (change)="onImageSelected($event)"  clearInput="true"  formControlName="img" required></ion-input>
+      <!-- <input #fileInput id="inputFile" inputMode="file" type="file" accept="image/*" (change)='onImageSelected(fileInput.files)' formControlName="img"> -->
+     </ion-row>
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="First name" inputMode="text" clearInput="true" formControlName="firstName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Last name" inputMode="text" clearInput="true" formControlName="lastName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Email" inputMode="email" clearInput="true" formControlName="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Phone" inputMode="tel" clearInput="true" formControlName="phone" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="workefficiency" inputMode="text" clearInput="true" formControlName="workefficiency" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="communication" inputMode="text" clearInput="true" formControlName="communication" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="exective" inputMode="text" clearInput="true" formControlName="exective" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="individuality" inputMode="text" clearInput="true" formControlName="individuality" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="location1" inputMode="text" clearInput="true" formControlName="location1" required></ion-input>
+        <ion-input placeholder="location2" inputMode="text" clearInput="true" formControlName="location2" required></ion-input>
+      </ion-item>
+      
+    </ion-list>
+  </form>
+</ion-content>

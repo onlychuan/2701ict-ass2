@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "firstName": "Adeline",
+    "lastName": "Torres",
+    "email": "adeline.torres@example.tv",
+    "phone": "+1 (887) 512-3630",
+    "img":"/assets/avatar.png",
+    "workefficiency":"1",
+    "communication":"2",
+    "exective":"3",
+    "individuality":"4",
+    "location1":"-27.5122",
+    "location2":"153.0537"
+  },
+  {
+    "id": 2,
+    "firstName": "Emily",
+    "lastName": "Sellers",
+    "email": "emily.sellers@example.io",
+    "phone": "+1 (981) 551-3390",
+    "img":"/assets/avatar.png",
+    "workefficiency":"5",
+    "communication":"5",
+    "exective":"5",
+    "individuality":"5",
+    "location1":"-27.5539",
+    "location2":"153.0537"
+  }
+]
